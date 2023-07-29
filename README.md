@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <a 
+    href="https://main.d1iicrvwglvc93.amplifyapp.com/" 
+    style="margin-bottom:20px; display:block;">
+    <img src="./img/wordle.png" alt="Logo" width="150px">
+  </a>
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-13.4.4-black)
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB)
+![typescript](https://img.shields.io/badge/typescript-5.0.4-blue)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-^3.3.2-%2338B2AC.svg)
 
-First, run the development server:
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+# Wordle
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Guess the Wordle in 6 tries.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Each guess must be a valid 5-letter word.
+- The color of the tiles will change to show how close your guess was to the word.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  **Examples**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    <img src="./img/example1.png" alt="example1" width="150px">
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  **W** is in the word and in the correct spot.
 
-## Learn More
+    <img src="./img/example2.png" alt="example2" width="150px">
 
-To learn more about Next.js, take a look at the following resources:
+  **I** is in the word but in the wrong spot.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    <img src="./img/example3.png" alt="example3" width="150px">
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  **U** is not in the word in any spot.
 
-## Deploy on Vercel
+## About
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Recreated Wordle using React, TypeScript, and Tailwind CSS for two versions. One is to use Redux to be a state container. The other is to adapt React hook useReducer to manage state.
