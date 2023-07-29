@@ -7,8 +7,10 @@
 
 ![Next.js](https://img.shields.io/badge/Next.js-13.4.4-black)
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB)
-![typescript](https://img.shields.io/badge/typescript-5.0.4-blue)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-^3.3.2-%2338B2AC.svg)
+![typeScript](https://img.shields.io/badge/typescript-5.0.4-blue)
+![TailwindCSS](https://img.shields.io/badge/tailwindCSS-^3.3.2-%2338B2AC.svg)
+
+![ReduxToolkit](https://img.shields.io/badge/ReduxToolkit-^1.9.5-593D88)
 
 </div>
 
