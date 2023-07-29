@@ -1,8 +1,10 @@
+"use client";
+
 import "tailwindcss/tailwind.css";
 import {v4 as uuidv4} from "uuid";
 import {useEffect, useReducer} from "react";
 import structuredClone from "@ungap/structured-clone";
-import words from "./words";
+import words from "../words";
 
 type Style = {
   [key: string]: string;
@@ -53,7 +55,7 @@ const initState: InitState = {
   answer: [],
 };
 
-const restState = structuredClone(initState);
+const resetState = structuredClone(initState);
 
 type Action = {
   type: string;
@@ -104,11 +106,11 @@ const reducer = (state: InitState, action: Action): InitState => {
         let score: number = 0;
         state.contentsObj[state.currentRow] = state.contentsObj[
           state.currentRow
-        ].map((obj: any, idx: number) => {
+        ].map((obj: ContentObj, idx: number) => {
           if (obj.word === state.answer[idx]) {
             score += 1;
             return {word: obj.word, style: style.correctSpot};
-          } else if (state.answer.includes(obj.word)) {
+          } else if (obj.word && state.answer.includes(obj.word)) {
             return {word: obj.word, style: style.wrongSpot};
           } else {
             return {word: obj.word, style: style.wrongWord};
@@ -129,7 +131,7 @@ const reducer = (state: InitState, action: Action): InitState => {
       }
 
     case "reset":
-      const restStateWithNewAnswer = structuredClone(restState);
+      const restStateWithNewAnswer = structuredClone(resetState);
       restStateWithNewAnswer.answer = getRandomWord();
       return restStateWithNewAnswer;
 
@@ -140,7 +142,7 @@ const reducer = (state: InitState, action: Action): InitState => {
       };
 
     default:
-      return structuredClone(restState);
+      return structuredClone(resetState);
   }
 };
 

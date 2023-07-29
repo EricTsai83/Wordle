@@ -36,3 +36,9 @@ Guess the Wordle in 6 tries.
 ## About
 
 Recreated Wordle using React, TypeScript, and Tailwind CSS for two versions. One is to use Redux to be a state container. The other is to adapt React hook useReducer to manage state.
+
+## Demo
+
+<div align="center">
+  <img src="./img/win-wordle-game.png" alt="win" width="300px">
+</div>
