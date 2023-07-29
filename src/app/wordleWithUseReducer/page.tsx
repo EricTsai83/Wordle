@@ -149,7 +149,7 @@ const reducer = (state: InitState, action: Action): InitState => {
 const buttonClassNames =
   "w-11 h-10 text-orange-600 hover:text-orange-300 cursor-pointer";
 
-export default function Wordle() {
+export default function Page() {
   const [state, dispatch] = useReducer(reducer, initState);
 
   const handleKeyDown = (event: KeyboardEvent) => {
