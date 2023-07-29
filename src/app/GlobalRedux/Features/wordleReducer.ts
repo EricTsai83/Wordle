@@ -79,7 +79,6 @@ export const wordleSlice = createSlice({
       }
     },
     enter: (state) => {
-      console.log(state.answer);
       if (state.currentCol === 4) {
         let score: number = 0;
         state.contentsObj[state.currentRow] = state.contentsObj[
